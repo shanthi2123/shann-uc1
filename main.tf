@@ -222,3 +222,25 @@ module "ManagementGroup" {
   display_name                          = var.display_name
   depends_on                            = [module.resource_group]
 }
+module "keyvault" {
+  source = "./modules/keyvault"
+  resource_group_name                   = var.resource_group_name
+  resource_group_location               = var.resource_group_location
+  key_vault_name                        = var.key_vault_name
+  soft_delete_retention_days            = var.soft_delete_retention_days
+  purge_protection_enabled              = var.purge_protection_enabled
+  key_sku_name                          = var.key_sku_name
+  key_permissions                       = var.key_permissions
+  secret_permissions                    = var.secret_permissions
+  storage_permissions                   = var.storage_permissions
+  secret1_name                          = var.secret1_name
+  secret1_value                         = var.secret1_value
+  secret2_name                          = var.secret2_name
+  secret2_value                         = var.secret2_value
+  secret3_name                          = var.secret3_name
+  secret3_value                         = var.secret3_value
+  secret4_name                          = var.secret4_name
+  secret4_value                         = var.secret4_value
+  object_id                             = var.object_id 
+  depends_on                            = [module.resource_group]
+}
