@@ -162,3 +162,23 @@ rule_operator                                       = "Equals"
 expected_value                                      = "High"
 property_type                                       = "String"
 display_name                                        = "parentgroup"  
+key_vault_name                                      = "shann1435keyvault"
+soft_delete_retention_days                          = 7
+purge_protection_enabled                            = false
+key_sku_name                                        = "Standard"
+key_permissions                                     =["Get",]
+secret_permissions                                  = [
+      "Get", "Backup", "Delete", "List", "Purge", "Recover", "Restore", "Set",
+    ]
+storage_permissions                                 =  [
+      "Get",
+    ]
+secret1_name                                        = "clientID"
+secret1_value                                       = "4a5048a3-edbb-4de5-9a95-8532c456e669"
+secret2_name                                        = "clientsecret"
+secret2_value                                       = "IjH8Q~xrHeurLmEBxqAilWj3EYMOnowcnMBe7bXv"
+secret3_name                                        = "tenantID"
+secret3_value                                       = "cd3abfb4-bd8f-4ad0-8438-14879733eb2f"
+secret4_name                                        = "subscriptionID"
+secret4_value                                       = "946b8e0ad-5178-4e00-b201-65f042c1d7ab"
+object_id                                           = "490aefd2-e72a-465f-b8e1-3314a185149a" 
