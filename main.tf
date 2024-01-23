@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=3.0.0"
+      version = "=3.69.0"
     }
   }
 }
@@ -11,6 +11,11 @@ terraform {
 provider "azurerm" {
   skip_provider_registration = true # This is only required when the User, Service Principal, or Identity running Terraform lacks permissions the to register Azure Resource Providers.
   features {}
+   client_id = var.secret1_value
+   client_secret = var.secret2_value
+   tenant_id = var.secret3_value
+   subscription_id = var.secret4_value
+
 }
 module "resource_group" {
     source = "./modules/RG"
